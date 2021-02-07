@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="index.css">
+    <title> Test Case - Lista de Empleados</title>
+    <div class="cabecera">
+        <label>Total de empleados = </label>
+        <label id="empleados"></label>
+        <label id="labelDivisa"> Divisa MX </label>
+    </div>
+    
+
+</head>
+<body>
+    <div class="container">
+        <button onclick="ActionInput(false)">Agregar empleado</button> 
+        <button onclick="ActionInput(true)">Modificar empleado</button>
+        <button onclick="CambiarDivisa()">Cambiar divisa</button>
+    </div>
+    
+    <form id="userInputForm" style="display: none;">
+        
+            <label for="inputNombreEmpleado">Nombre de empleado</label>
+            <input type="le" id="inputNombreEmpleado" name="inputNombreEmpleado"  required/>
+
+            <label for="inputEmpresa">Empresa</label>
+            <input id="inputEmpresa" name="inputEmpresa"  required/>
+
+            <label for="inputSalario">Salario</label>
+            <input type="number" step="any" id="inputSalario" name="inputSalario"  required/>
+
+            <button id="guardar">Guardar</button>
+        
+    </form>
+    
+    <div class="filtrar">
+        <label>Filtrar</label>
+        <input id="filtrar" placeholder="Escriba algo para filtrar" onkeyup="FilterTable()"/>
+    </div>
+    <table id="propiedadesEmpleado" class="propiedadesEmpleado" >
+        <tr>
+            <th> Nombre de Empleado </th>
+            <th> Empresa </th>
+            <th> Salario </th>
+            <th> Imagen</th>
+        </tr>
+
+    </table>
+
+    <div id="contentarea" class="contentarea" style="display: none;">
+      <div class="camera">
+        <video id="video">Video stream not available.</video>
+        <button id="startbutton">Take photo</button> 
+      </div>
+      <canvas id="canvas" style="display: none;">
+      </canvas>
+      <div class="output">
+        <img id="photo"> 
+      </div>
+    </div>
+    
+
+</body>
+</html>
+
+<script src="index.js"></script>
